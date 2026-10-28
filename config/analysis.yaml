@@ -1,0 +1,24 @@
+build: GRCh37
+
+factor_gwas:
+  name: GenomicSEM
+  fuma_dir: input/fuma/SleepDuration_Factor_FUMA_job781252
+
+source_gwas:
+  - name: Dashti
+    fuma_dir: input/fuma/Dashti_SleepDuration_FUMA_job781259
+  - name: AustinZimmerman
+    fuma_dir: input/fuma/AustinZimmerman_ShortSleep_FUMA_job781256
+  - name: Portas
+    fuma_dir: input/fuma/PortasL_SleepDuration_FUMA_job781258
+
+locus_overlap:
+  flank_bp: 250000
+
+thresholds:
+  magma_gene_p: 2.5e-06
+  gene_set_fdr: 0.05
+
+outputs:
+  results_dir: results
+  reports_dir: reports
